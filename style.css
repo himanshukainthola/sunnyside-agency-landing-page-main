@@ -29,7 +29,10 @@
     2. Remove default margin
   */
 * {
+    padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none; 
 }
 
 /*
@@ -46,7 +49,6 @@ body {
     5. Improve text rendering
   */
 body {
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -101,3 +103,158 @@ body{
     font-size: 1.125rem;
 }
 
+/*!-----Utility classes-----*/
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+
+/*!-------header-----*/
+.hero{
+    height: 100vh;
+    background-image: url(images/mobile/image-header.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 1.5rem;
+}
+
+.hero__navbar{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    
+}
+
+.hero__navbar--logo{
+    min-width: 124px; 
+}
+
+.hero__navbar--menuicon{
+    display: none;
+}
+
+.hero__navbar--menu{
+    gap: 1rem;
+
+}
+
+.hero__navbar--menu a{
+
+    color: var(--White);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.hero__navbar--menu a:hover{
+    padding: 1rem 1.5rem;
+    border-radius: 40PX;
+    background-color: hsl(202, 85%, 73%);
+}
+
+.hero__navbar--menu .contact{
+    font-family: var(--font-fraunces);
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: var(--Very-dark-desaturated-blue);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 40PX;
+}
+
+.hero__navbar--menu .contact:hover,
+.hero__navbar--menu .contact:active{ 
+    color: white;
+    background-color: hsl(202, 85%, 73%);
+}
+
+
+@media (max-width: 670px){
+    .hero__navbar{
+        position: relative;
+    }
+
+    .hero__navbar--menu::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -25px;
+        right: 0;
+        border-left: 30px solid transparent;
+        border-bottom: 30px solid white;
+    }
+
+    .hero__navbar--menu{
+        position: absolute;
+        flex-direction: column;
+        top: 75px;
+        right: 0px;
+        width: 100%;
+        height: 300px;
+        padding: 2rem;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        z-index: 1000;  
+        transform: translateY(-200%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .hero__navbar--menu[data-visible="true"]{
+        transform: translateY(0);
+    }
+
+    .hero__navbar--menu a{
+        font-size: 1.2rem;
+        color: var(--Dark-grayish-blue);
+    }
+
+    .hero__navbar--menu .contact{
+        font-size: 1rem;
+        background-color: var(--Yellow);
+        padding: 1rem 1.5rem;
+        border-radius: 40px;
+    }
+
+
+    .hero__navbar--menuicon{
+        display: block;
+    }
+}
+
+.hero__content{
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content--heading{
+    font-family: var(--font-fraunces);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--White);
+    text-align: center;
+    letter-spacing: 6px;
+
+}
+
+.about{
+    display: grid;
+    gap: 4rem;
+}
+
+.about__discription{
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: center;
+    padding-inline: 1.5rem;
+}
