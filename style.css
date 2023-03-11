@@ -251,10 +251,31 @@ body{
     gap: 4rem;
 }
 
-.about__discription{
+.about__content{
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
     align-items: center;
     text-align: center;
     padding-inline: 1.5rem;
+}
+
+.about__content--heading{
+    font-family: var(--font-fraunces);
+    font-size: 2.1rem;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.about__content--descp{
+    color: var(--Dark-grayish-blue);
+    line-height: 1.8rem;
+    font-weight: 300;
+}
+
+.about__content--btn{
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: var(--font-fraunces);
+    color: var(--Very-dark-desaturated-blue);
+    text-transform: uppercase;  
 }
