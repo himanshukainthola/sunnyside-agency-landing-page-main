@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
 </head>
+
 <body>
   <header class="hero">
     <nav class="hero__navbar flex">
@@ -46,15 +51,15 @@
     </picture>
 
     <article class="about__content flex">
-      <h2  class="about__content--heading" >Transform your brand</h2>
+      <h2 class="about__content--heading">Transform your brand</h2>
 
       <p class="about__content--descp">We are a full-service creative agency specializing in helping brands grow fast.
         Engage your clients through compelling visuals that do most of the marketing for you.
       </p>
 
-      <a class="about__content--btn yellow" href="">Learn more</a>
+      <a class="about__content--link yellow" href="">Learn more</a>
     </article>
-   
+
     <picture>
       <img src="images/mobile/image-stand-out.jpg" alt="">
     </picture>
@@ -62,26 +67,27 @@
     <article class="about__content flex">
       <h2 class="about__content--heading">Stand out to the right audience</h2>
 
-      <p class="about__content--descp"> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+      <p class="about__content--descp"> Using a collaborative formula of designers, researchers, photographers,
+        videographers, and copywriters,
         we’ll build and extend your brand in digital places.
       </p>
 
-      <a class="about__content--btn red" href="">Learn more</a>
+      <a class="about__content--link red" href="">Learn more</a>
     </article>
 
   </section>
 
   <section id="services" class="services">
-    <div class="left">
-      <div>
+    <div class="services__col left flex">
+      <div class="left__content flex">
         <h3>Graphic design</h3>
         <p> Great design makes you memorable. We deliver artwork that underscores your brand message and captures
           potential clients’ attention.</p>
       </div>
     </div>
 
-    <div class="right">
-      <div>
+    <div class="services__col right flex">
+      <div class="right__content flex">
         <h3>Photography</h3>
         <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
         </p>
@@ -90,45 +96,43 @@
   </section>
 
 
-  <section class="testimonials">
-    <div>
+  <section class="testimonial flex">
+    <div class="testimonial__heading">
       <h4>Client testimonials</h4>
     </div>
 
-    <div>
-      <div>
-        <div>
-          <img src="images/image-emily.jpg" alt="">
+    <div class="testimonial__col--container flex">
+      <div class="testimonial__col flex">
+        <div class="grid">
+          <img clas="testimonial__img" src="images/image-emily.jpg" alt="">
           <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
             hit.</p>
         </div>
-        <div>
+        <div">
           <h5>Emily R</h5>
           <p>Marketing Director</p>
-        </div>
-      </div>
-
-      <div>
-        <img src="images/image-thomas.jpg" alt="">
-        <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
-          hit.</p>
-      </div>
-      <div>
-        <h5>Emily R</h5>
-        <p>Marketing Director</p>
       </div>
     </div>
 
+    <div class="testimonial__col">
+      <img clas="testimonial__img" src="images/image-thomas.jpg" alt="">
+      <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
+        hit.</p>
+    </div>
     <div>
-      <img src="images/image-jennie.jpg" alt="">
+      <h5>Emily R</h5>
+      <p>Marketing Director</p>
+    </div>
+
+
+    <div class="testimonial__col">
+      <img clas="testimonial__img" src="images/image-jennie.jpg" alt="">
       <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
     </div>
     <div>
       <h5>Jennie F.</h5>
       <p>Business Owner</p>
     </div>
-    </div>
-
     </div>
 
   </section>

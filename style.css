@@ -1,4 +1,4 @@
-:root{
+:root {
     --Soft-red: hsl(7, 99%, 70%);
     --Yellow: hsl(51, 100%, 49%);
     --background: hsl(26, 100%, 99%);
@@ -15,11 +15,15 @@
     --margin: 26px;
     --font-barlow: 'Barlow', sans-serif;
     --font-fraunces: 'Fraunces', serif;
+    --fw-neutral: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 900;
 
 }
 
 
-/* 1. Use a more-intuitive box-sizing model. */ *,
+/* 1. Use a more-intuitive box-sizing model. */
+*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -32,7 +36,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none; 
+    list-style: none;
 }
 
 /*
@@ -94,70 +98,71 @@ h6 {
 #__next {
     isolation: isolate;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: var(--font-barlow);
     font-size: 1.125rem;
 }
 
 /*!-----Utility classes-----*/
 
-.flex{
+.flex {
     display: flex;
 }
 
-.grid{
+.grid {
     display: grid;
 }
 
 
 /*!-------header-----*/
-.hero{
-    height: 100vh;
-    background-image: url(images/mobile/image-header.jpg) ;
+.hero {
+    height: 61vh;
+    background-image: url(images/mobile/image-header.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem 1.5rem;
 }
 
-.hero__navbar{
+.hero__navbar {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5rem;
-    
+
 }
 
-.hero__navbar--logo{
-    min-width: 124px; 
+.hero__navbar--logo {
+    min-width: 124px;
 }
 
-.hero__navbar--menuicon{
+.hero__navbar--menuicon {
     display: none;
 }
 
-.hero__navbar--menu{
+.hero__navbar--menu {
     gap: 1rem;
 
 }
 
-.hero__navbar--menu a{
+.hero__navbar--menu a {
 
     color: var(--White);
     font-size: 1rem;
     padding: 1rem 1.5rem;
 }
 
-.hero__navbar--menu a:hover{
+.hero__navbar--menu a:hover {
     padding: 1rem 1.5rem;
     border-radius: 40PX;
     background-color: hsl(202, 85%, 73%);
 }
 
-.hero__navbar--menu .contact{
+.hero__navbar--menu .contact {
     font-family: var(--font-fraunces);
     text-transform: uppercase;
     font-size: .9rem;
@@ -168,18 +173,18 @@ body{
 }
 
 .hero__navbar--menu .contact:hover,
-.hero__navbar--menu .contact:active{ 
+.hero__navbar--menu .contact:active {
     color: white;
     background-color: hsl(202, 85%, 73%);
 }
 
 
-@media (max-width: 670px){
-    .hero__navbar{
+@media (max-width: 670px) {
+    .hero__navbar {
         position: relative;
     }
 
-    .hero__navbar--menu::before{
+    .hero__navbar--menu::before {
         content: "";
         position: absolute;
         width: 0;
@@ -190,7 +195,7 @@ body{
         border-bottom: 30px solid white;
     }
 
-    .hero__navbar--menu{
+    .hero__navbar--menu {
         position: absolute;
         flex-direction: column;
         top: 75px;
@@ -201,21 +206,21 @@ body{
         align-items: center;
         justify-content: space-around;
         background-color: white;
-        z-index: 1000;  
+        z-index: 1000;
         transform: translateY(-200%);
         transition: transform 500ms ease-in-out;
     }
 
-    .hero__navbar--menu[data-visible="true"]{
+    .hero__navbar--menu[data-visible="true"] {
         transform: translateY(0);
     }
 
-    .hero__navbar--menu a{
+    .hero__navbar--menu a {
         font-size: 1.2rem;
         color: var(--Dark-grayish-blue);
     }
 
-    .hero__navbar--menu .contact{
+    .hero__navbar--menu .contact {
         font-size: 1rem;
         background-color: var(--Yellow);
         padding: 1rem 1.5rem;
@@ -223,19 +228,19 @@ body{
     }
 
 
-    .hero__navbar--menuicon{
+    .hero__navbar--menuicon {
         display: block;
     }
 }
 
-.hero__content{
+.hero__content {
     flex-direction: column;
-    gap: 3.5rem;
     justify-content: center;
     align-items: center;
+    gap: 3.5rem;
 }
 
-.hero__content--heading{
+.hero__content--heading {
     font-family: var(--font-fraunces);
     font-size: 2.5rem;
     font-weight: 900;
@@ -246,36 +251,137 @@ body{
 
 }
 
-.about{
-    display: grid;
-    gap: 4rem;
-}
 
-.about__content{
+.about__content {
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
     text-align: center;
-    padding-inline: 1.5rem;
+    gap: 1.8rem;
+    padding: 4rem 1.5rem;
 }
 
-.about__content--heading{
+.about__content--heading {
     font-family: var(--font-fraunces);
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--Very-dark-desaturated-blue);
 }
 
-.about__content--descp{
+.about__content--descp {
     color: var(--Dark-grayish-blue);
     line-height: 1.8rem;
     font-weight: 300;
 }
 
-.about__content--btn{
+.about__content--link {
     font-size: 1rem;
     font-weight: 900;
     font-family: var(--font-fraunces);
     color: var(--Very-dark-desaturated-blue);
-    text-transform: uppercase;  
+    text-transform: uppercase;
+    margin-block: 10px;
+}
+
+.about__content--link::after {
+    content: " ";
+    display: block;
+    width: 115%;
+    height: .6rem;
+    margin: -8px;
+    border-radius: 100px;
+    z-index: -1;
+    transition: 0.3s linear;
+}
+
+.yellow::after {
+    background: hsl(51deg 100% 49% / 25%);
+}
+
+.yellow:hover::after {
+    background: var(--Yellow);
+}
+
+.red::after {
+    background: hsl(7deg 99% 70% / 25%);
+}
+
+.red:hover::after {
+    background: var(--Soft-red);
+}
+
+
+.services__col {
+    align-items: end;
+    height: calc(600px);
+    padding: 3.7rem 1.2rem;
+    text-align: center;
+    color: var(--Dark-blue-photography-text);
+}
+
+.left {
+    background: url(images/mobile/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.right {
+    background: url(images/mobile/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left__content,
+.right__content {
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+
+.left__content h3,
+.right__content h3 {
+    font-size: 1.75rem;
+    font-family: var(--font-fraunces);
+    font-weight: var(--fw-extra-bold);
+    text-transform: capitalize;
+
+}
+
+.left__content p,
+.right__content p {
+    font-size: 1.01rem;
+    line-height: 1.6rem;
+}
+
+
+.testimonial {
+    padding: 3.8rem 1.5rem;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.testimonial__heading {
+    font-family: var(--font-fraunces);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--Grayish-blue);
+    font-size: .95rem;
+    font-weight: var(--fw-extra-bold);
+    letter-spacing: 4px;
+}
+
+.testimonial__col--container {
+
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.testimonial__col {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial__img {
+    width: 60px;
+    aspect-ratio: 1;
 }
