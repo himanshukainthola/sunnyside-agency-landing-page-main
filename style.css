@@ -121,7 +121,7 @@ body {
 
 /*!-------header-----*/
 .hero {
-    height: 61vh;
+    height: 100vh;
     background-image: url(images/mobile/image-header.jpg);
     background-size: cover;
     background-position: center;
@@ -180,6 +180,10 @@ body {
 
 
 @media (max-width: 670px) {
+    .hero {
+        height: 61vh;
+    }
+
     .hero__navbar {
         position: relative;
     }
@@ -355,9 +359,11 @@ body {
 
 
 .testimonial {
-    padding: 3.8rem 1.5rem;
+    padding-top: 3.9rem;
+    padding-bottom: 5.5rem;
+    padding-inline: 1.5rem;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 3.8rem;
 }
 
 .testimonial__heading {
@@ -373,15 +379,100 @@ body {
 .testimonial__col--container {
 
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 4rem;
 }
 
 .testimonial__col {
     flex-direction: column;
-    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    color: var(--Very-dark-grayish-blue);
 }
 
 .testimonial__img {
-    width: 60px;
+    width: 70px;
     aspect-ratio: 1;
+    border-radius: 50%;
+    justify-self: center;
+    margin-bottom: 2.5rem;
+}
+
+.testimonial__col p {
+    line-height: 1.85rem;
+    font-weight: 500;
+}
+
+.testimonial__col--name {
+    font-family: var(--font-fraunces);
+    font-size: 1.15rem;
+    font-weight: var(--fw-extra-bold);
+    color: var(--Very-dark-desaturated-blue);
+    margin-bottom: 5px;
+}
+
+.testimonial__col--occupation {
+    font-size: .85rem;
+    color: var(--Grayish-blue);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--footer-background);
+    padding-top: 4rem;
+    padding-bottom: 5.5rem;
+    padding-inline: 1.5rem;
+    text-align: center;
+}
+
+.footer__logo svg {
+    transform: scale(1.35);
+}
+
+.footer__logo path {
+    fill: var(--footer-logo);
+}
+
+.footer__links {
+    gap: 3.5rem;
+}
+
+.footer__links li>a {
+    color: var(--Dark-moderate-cyan-footer);
+}
+
+.footer__links li>a:hover {
+    color: var(--White);
+}
+
+.footer__social {
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.footer__social a>svg>path:hover {
+    fill: var(--White);
+}
+
+@media (min-width: 750px) {
+
+    .hero {
+        height: 100vh;
+        background-image: url(images/desktop/image-header.jpg);
+    }
+
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: 1frs;
+    }
+
 }
